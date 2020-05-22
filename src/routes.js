@@ -3,13 +3,15 @@ import Foundation from 'react-native-vector-icons/Foundation';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigavitor } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './pages/Home';
 import Search from './pages/Search';
 import YourLibery from './pages/YourLibery';
+import Player from './pages/Player';
 
 const App = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 function AppRoutes() {
   return (
@@ -59,5 +61,17 @@ function AppRoutes() {
 }
 
 export default function Routes() {
-  return <AppRoutes />;
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        cardStyle: {
+          backgroundColor: '#191414',
+        },
+      }}
+    >
+      <Stack.Screen name="AppRoutes" component={AppRoutes} />
+      <Stack.Screen name="Player" component={Player} />
+    </Stack.Navigator>
+  );
 }

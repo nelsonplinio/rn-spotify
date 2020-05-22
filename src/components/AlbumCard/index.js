@@ -13,4 +13,4 @@ const AlbumCard = ({ data }) => {
   );
 };
 
-export default AlbumCard;
+export default React.memo(AlbumCard);

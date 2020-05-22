@@ -3,9 +3,7 @@ import { FlatList } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 export const Container = styled(LinearGradient).attrs({
-  colors: ['#7159c1', '#783b81', '#62294d', '#3f1e29', '#191414'],
-  start: { x: 0, y: 0 },
-  end: { x: 0, y: 0 },
+  colors: ['#1f1d1e', '#212021', '#252425', '#282828'],
 })`
   flex: 1;
 `;

@@ -6,7 +6,7 @@ import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { sections } from '../../services/data';
 
 import AlbumCard from '../../components/AlbumCard';
-
+import PlayerBar from '../../components/PlayerBar';
 import {
   Container,
   Inner,
@@ -21,7 +21,10 @@ const Home = () => {
   return (
     <Container>
       <ScrollView
-        contentContainerStyle={{ paddingTop: getStatusBarHeight() + 16 }}
+        contentContainerStyle={{
+          paddingTop: getStatusBarHeight() + 16,
+          paddingBottom: 50,
+        }}
       >
         <Inner>
           <Header>
@@ -41,129 +44,9 @@ const Home = () => {
               />
             </SectionAlbunsContainer>
           ))}
-          {/* 
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer>
-            <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer>
-          <SectionAlbunsContainer> */}
-          {/* <SectionAlbunsTitle>Recently played</SectionAlbunsTitle>
-            <SectionAlbunsList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={albuns}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <AlbumCard data={item} />}
-            />
-          </SectionAlbunsContainer> */}
         </Inner>
       </ScrollView>
+      <PlayerBar />
     </Container>
   );
 };
