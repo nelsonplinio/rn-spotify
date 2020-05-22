@@ -68,7 +68,7 @@ const Player = () => {
       <BottomContainer>
         <MusicContainer>
           <MusicInfo>
-            <MusicName>Vida loka Pt.1</MusicName>
+            <MusicName>Vida Loka, Pt. 1</MusicName>
             <MusicOwner>Racionais Mc's</MusicOwner>
           </MusicInfo>
           <MusicSliderContainer>

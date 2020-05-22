@@ -26,20 +26,20 @@ const PlayerBar = () => {
           <MusicImage
             source={{
               uri:
-                'https://lh3.googleusercontent.com/YebIcJ0tYMOBSbUOJH77FhHHDnaRsrfKqrDjBe1pAZK4b8RG6w0rVrQOPqWl48_KHK_T9VTHny3I7Uiu7A=w544-h544-l90-rj',
+                'https://lh3.googleusercontent.com/FSZk8Vp72dpbubbJ1vCZKaIN-SedgBRjxFt-qNxk0n72QfUdNL6eiVvt-ixFaWrs1HriSC0Zpu5j4X8=w544-h544-l90-rj',
             }}
           />
 
-          <MusicName numberOfLines={1}>Trafico de drogas</MusicName>
-
-          <Entypo
-            name="dot-single"
-            size={14}
-            style={{ marginTop: 4 }}
-            color="rgba(255, 255, 255,0.6)"
-          />
-
-          <MusicOwner numberOfLines={1}>Um cara ai</MusicOwner>
+          <MusicName numberOfLines={1}>
+            Vida Loka, Pt. 1
+            <Entypo
+              name="dot-single"
+              size={14}
+              style={{ marginTop: 4 }}
+              color="rgba(255, 255, 255,0.6)"
+            />
+            <MusicOwner numberOfLines={1}>Racionais Mc's</MusicOwner>
+          </MusicName>
         </MusicInfoContainer>
 
         <MusicActionsContainer>

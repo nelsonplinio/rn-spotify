@@ -14,6 +14,7 @@ export const Container = styled.View`
 export const MusicImage = styled.Image`
   height: 60px;
   width: 60px;
+  margin-left: -7px;
   margin-right: 16px;
 `;
 
@@ -32,10 +33,9 @@ export const MusicName = styled.Text`
 `;
 
 export const MusicOwner = styled.Text`
-  font-size: 16px;
+  font-size: 16px !important;
   color: #fff;
-  opacity: 0.8;
-  flex: 1;
+  opacity: 0.4 !important;
 `;
 
 export const MusicActionsContainer = styled.View`
