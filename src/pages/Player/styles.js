@@ -22,7 +22,7 @@ export const Container = styled(LinearGradient).attrs({
 })`
   flex: 1;
   justify-content: space-between;
-  padding: ${statusBarHeight + 16}px 20px 16px;
+  padding: ${statusBarHeight + 16}px 6% 16px;
 `;
 
 export const TopBar = styled.View`
@@ -90,7 +90,7 @@ export const MusicControlContainer = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 16px 0 10%;
 `;
 
 export const PlayerButton = styled.TouchableOpacity`
