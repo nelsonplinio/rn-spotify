@@ -10,7 +10,7 @@ export const Container = styled(LinearGradient).attrs({
 export const Inner = styled.View`
   align-items: center;
   flex: 1;
-  padding: 0 16px;
+  padding: 10% 16px 0;
 `;
 
 export const Title = styled.Text`
