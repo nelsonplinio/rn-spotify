@@ -32,7 +32,12 @@ const PlayerBar = () => {
 
           <MusicName numberOfLines={1}>Trafico de drogas</MusicName>
 
-          <Entypo name="dot-single" size={16} color="rgba(255, 255, 255,0.8)" />
+          <Entypo
+            name="dot-single"
+            size={14}
+            style={{ marginTop: 4 }}
+            color="rgba(255, 255, 255,0.6)"
+          />
 
           <MusicOwner numberOfLines={1}>Um cara ai</MusicOwner>
         </MusicInfoContainer>

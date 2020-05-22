@@ -11,28 +11,31 @@ export const Container = styled.View`
   justify-content: space-between;
 `;
 
-export const MusicInfoContainer = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
-
 export const MusicImage = styled.Image`
   height: 60px;
   width: 60px;
   margin-right: 16px;
 `;
 
+export const MusicInfoContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  padding: 0 8px;
+`;
+
 export const MusicName = styled.Text`
   font-size: 16px;
   color: #fff;
   font-weight: bold;
+  flex: 1;
 `;
 
 export const MusicOwner = styled.Text`
   font-size: 16px;
   color: #fff;
-  margin-left: 5px;
   opacity: 0.8;
+  flex: 1;
 `;
 
 export const MusicActionsContainer = styled.View`
