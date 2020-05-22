@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 import PlayerBar from '../../components/PlayerBar';
 import { sections } from '../../services/data';
-
 import SearchAlbumCard from '../../components/SearchAlbumCard';
 
 import {
@@ -18,11 +18,14 @@ import {
 } from './styles';
 
 const Search = () => {
+  const statusBarHeight = useMemo(getStatusBarHeight, []);
+
   return (
     <Container>
       <ScrollView
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{
+          paddingTop: statusBarHeight,
           paddingBottom: 50,
         }}
       >

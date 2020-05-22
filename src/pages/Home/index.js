@@ -39,7 +39,7 @@ const Home = () => {
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 data={section.albums}
-                keyExtractor={(item) => item.id}
+                keyExtractor={(item) => `${item.id}`}
                 renderItem={({ item }) => <AlbumCard data={item} />}
               />
             </SectionAlbunsContainer>
