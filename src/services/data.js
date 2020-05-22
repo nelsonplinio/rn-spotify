@@ -1,4 +1,5 @@
 import suffleArray from '../utils/suffleArray';
+import getRandomColor from '../utils/getRandomColor';
 
 export const albums = [
   {
@@ -7,6 +8,7 @@ export const albums = [
     image:
       'https://images.suamusica.com.br/i2Lryxgotn2hRXlVHaxuN_52SVw=/300x300/7776778/1369617/cd_cover.jpg',
     owner: 'Tribo da periferia',
+    color: getRandomColor(),
   },
   {
     id: 2,
@@ -14,6 +16,7 @@ export const albums = [
     image:
       'https://upload.wikimedia.org/wikipedia/pt/e/e9/1000_Trutas%2C_1000_Tretas.jpg',
     owner: "Racionais Mc's",
+    color: getRandomColor(),
   },
   {
     id: 3,
@@ -21,6 +24,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/3sejRSHjDKz62niW-xgNCZxY-emXnoCDca3Ycope_Vd-6kShVwyhuVzCkXDGkQ36ag8gDBYRM8Lhzp6q=w544-h544-l90-rj',
     owner: 'Zé Neto & Cristiano',
+    color: getRandomColor(),
   },
   {
     id: 4,
@@ -28,6 +32,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/PSIZ9cf9hpESZwcSz2ylS5I-zIREqCSagxV-X4CJqefrE0sRCktRtFw-a7PlkLygmg7k1nZREKCaSzY=w544-h544-l90-rj',
     owner: 'Travis Scott',
+    color: getRandomColor(),
   },
   {
     id: 5,
@@ -35,6 +40,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/4KB4cS7i427tdsareLs5j10tifHVvmP6X3G4umnxCm8Ra9zkG1hYq0C7Lg-B-I-n1i8SP-heKzAKIQXw=w544-h544-l90-rj',
     owner: 'Travis Scott',
+    color: getRandomColor(),
   },
   {
     id: 6,
@@ -42,6 +48,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/W4ZqD1DoejD5Auq5R8eSKebI40-DvzjGvtuwAka4yvRcESfWb4oo0n6tpzK-GCNHpM2VePTaFaLlJ_M=w544-h544-l90-rj',
     owner: 'Bruno & Marrone',
+    color: getRandomColor(),
   },
   {
     id: 7,
@@ -49,6 +56,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/FSZk8Vp72dpbubbJ1vCZKaIN-SedgBRjxFt-qNxk0n72QfUdNL6eiVvt-ixFaWrs1HriSC0Zpu5j4X8=w544-h544-l90-rj',
     owner: "Racionais Mc's",
+    color: getRandomColor(),
   },
   {
     id: 8,
@@ -56,6 +64,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/YebIcJ0tYMOBSbUOJH77FhHHDnaRsrfKqrDjBe1pAZK4b8RG6w0rVrQOPqWl48_KHK_T9VTHny3I7Uiu7A=w544-h544-l90-rj',
     owner: 'Gusttavo Lima',
+    color: getRandomColor(),
   },
   {
     id: 9,
@@ -63,6 +72,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/Ky2HekPkKH5wrcVno9eKdDPsc77-deFe8t9C200hVkgDr2-UpdUtbvNJjhTAp1_ZPAUv-MBYNZNdKMo=w544-h544-l90-rj',
     owner: 'Gusttavo Lima',
+    color: getRandomColor(),
   },
   {
     id: 10,
@@ -70,6 +80,7 @@ export const albums = [
     image:
       'https://lh3.googleusercontent.com/9Oe4acEXgmAlCKgcgI6JlSXi2Tj30u6anzvfGBrunGO-fLhBTgzy-ei1ugPJpZDD5ArKFod9H4RTA5g0=w544-h544-l90-rj',
     owner: 'Drake',
+    color: getRandomColor(),
   },
 ];
 

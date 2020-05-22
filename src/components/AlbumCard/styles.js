@@ -24,7 +24,8 @@ export const Title = styled.Text`
 `;
 
 export const Owner = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   color: #f1f1f1;
   font-weight: 500;
+  opacity: 0.8;
 `;

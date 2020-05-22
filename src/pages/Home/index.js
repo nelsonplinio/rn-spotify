@@ -33,7 +33,7 @@ const Home = () => {
             </HeaderButton>
           </Header>
           {sections.map((section) => (
-            <SectionAlbunsContainer key={section.id}>
+            <SectionAlbunsContainer key={`${section.id}`}>
               <SectionAlbunsTitle>{section.title}</SectionAlbunsTitle>
               <SectionAlbunsList
                 horizontal
