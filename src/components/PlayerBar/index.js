@@ -3,6 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
+import Foundation from 'react-native-vector-icons/Foundation';
 import {
   Container,
   MusicInfoContainer,
@@ -17,8 +18,8 @@ import {
 const PlayerBar = () => {
   const navigation = useNavigation();
 
-  const [played, setPlayed] = useState(false);
-  const [isFavority, setIsFavority] = useState(false);
+  const [played, setPlayed] = useState(true);
+  const [isFavority, setIsFavority] = useState(true);
   return (
     <TouchableWithoutFeedback onPress={() => navigation.navigate('Player')}>
       <Container>
@@ -52,9 +53,9 @@ const PlayerBar = () => {
           </FavorityButton>
 
           <PlayButton onPress={() => setPlayed(!played)}>
-            <Icon
+            <Foundation
               name={played ? 'pause' : 'play'}
-              size={25}
+              size={34}
               color="rgba(255, 255, 255, 0.7)"
             />
           </PlayButton>

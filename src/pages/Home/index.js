@@ -25,7 +25,7 @@ const Home = () => {
       <Header
         style={{
           opacity: scrollOffset.interpolate({
-            inputRange: [0, 40],
+            inputRange: [0, 30],
             outputRange: [1, 0],
           }),
         }}
