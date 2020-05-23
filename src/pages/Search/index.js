@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { ScrollView } from 'react-native';
+import React, { useMemo, useState } from 'react';
+import { Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import PlayerBar from '../../components/PlayerBar';
@@ -18,19 +18,49 @@ import {
 } from './styles';
 
 const Search = () => {
+  const [scrollOffset] = useState(new Animated.Value(0));
   const statusBarHeight = useMemo(getStatusBarHeight, []);
 
   return (
     <Container>
-      <ScrollView
+      <Title
+        style={{
+          transform: [
+            {
+              scale: scrollOffset.interpolate({
+                inputRange: [10, 100],
+                outputRange: [1, 0.85],
+              }),
+            },
+          ],
+          opacity: scrollOffset.interpolate({
+            inputRange: [0, 30],
+            outputRange: [1, 0.8],
+          }),
+        }}
+      >
+        Busca
+      </Title>
+      <Animated.ScrollView
+        onScroll={Animated.event(
+          [
+            {
+              nativeEvent: {
+                contentOffset: {
+                  y: scrollOffset,
+                },
+              },
+            },
+          ],
+          { useNativeDriver: true },
+        )}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{
           paddingTop: statusBarHeight,
-          paddingBottom: 50,
+          paddingBottom: 72,
         }}
       >
         <Inner>
-          <Title>Busca</Title>
           <SearchContainer>
             <Icon name="search" size={24} color="#777" />
             <SearchTextInput>Artistas, Sons, ou podcasts</SearchTextInput>
@@ -48,7 +78,7 @@ const Search = () => {
             </SectionContainer>
           ))}
         </Inner>
-      </ScrollView>
+      </Animated.ScrollView>
       <PlayerBar />
     </Container>
   );

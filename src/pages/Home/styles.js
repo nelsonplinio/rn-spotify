@@ -1,20 +1,25 @@
 import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import { FlatList, Animated } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
-export const Container = styled(LinearGradient).attrs({
-  colors: ['#1f1d1e', '#212021', '#252425', '#282828'],
-})`
+export const Container = styled.View`
   flex: 1;
+  background: #282828;
 `;
 
 export const Inner = styled.View`
   flex: 1;
+  margin-top: 60px;
+  background: #282828;
 `;
-export const Header = styled.View`
+export const Header = styled(Animated.View)`
   width: 100%;
-  height: 40px;
+  height: 60px;
   padding: 0 8px;
+  position: absolute;
+  padding: 8px;
+  justify-content: center;
+  top: ${getStatusBarHeight()}px;
 `;
 
 export const HeaderButton = styled.TouchableOpacity`

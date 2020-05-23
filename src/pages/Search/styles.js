@@ -1,25 +1,28 @@
 import styled from 'styled-components/native';
-import LinearGradient from 'react-native-linear-gradient';
+import { Animated } from 'react-native';
 
-export const Container = styled(LinearGradient).attrs({
-  colors: ['#1f1d1e', '#212021', '#252425', '#282828'],
-})`
+export const Container = styled.View`
   flex: 1;
+  background: #212021;
 `;
 
 export const Inner = styled.View`
   align-items: center;
   flex: 1;
-  padding: 10% 16px 0;
+  margin-top: 30%;
+  padding: 0 16px 0;
+  background: #212021;
 `;
 
-export const Title = styled.Text`
+export const Title = styled(Animated.Text)`
   font-size: 50px;
   color: #fff;
+  width: 100%;
   font-weight: bold;
-  margin: 16% 0 16px;
+  margin: 18% 0;
   align-self: stretch;
   text-align: center;
+  position: absolute;
 `;
 
 export const SearchContainer = styled.View`

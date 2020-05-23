@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
-import { ScrollView } from 'react-native';
+import { Animated } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 import { sections } from '../../services/data';
@@ -18,20 +18,41 @@ import {
 } from './styles';
 
 const Home = () => {
+  const [scrollOffset] = useState(new Animated.Value(0));
+
   return (
     <Container>
-      <ScrollView
+      <Header
+        style={{
+          opacity: scrollOffset.interpolate({
+            inputRange: [0, 40],
+            outputRange: [1, 0],
+          }),
+        }}
+      >
+        <HeaderButton>
+          <Icon name="settings" size={26} color="#fff" />
+        </HeaderButton>
+      </Header>
+      <Animated.ScrollView
+        onScroll={Animated.event(
+          [
+            {
+              nativeEvent: {
+                contentOffset: {
+                  y: scrollOffset,
+                },
+              },
+            },
+          ],
+          { useNativeDriver: true },
+        )}
         contentContainerStyle={{
           paddingTop: getStatusBarHeight() + 16,
           paddingBottom: 50,
         }}
       >
         <Inner>
-          <Header>
-            <HeaderButton>
-              <Icon name="settings" size={26} color="#fff" />
-            </HeaderButton>
-          </Header>
           {sections.map((section) => (
             <SectionAlbunsContainer key={`${section.id}`}>
               <SectionAlbunsTitle>{section.title}</SectionAlbunsTitle>
@@ -45,7 +66,7 @@ const Home = () => {
             </SectionAlbunsContainer>
           ))}
         </Inner>
-      </ScrollView>
+      </Animated.ScrollView>
       <PlayerBar />
     </Container>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container, Title, Image } from './styles';
 
 const SearchAlbumCard = ({ album }) => {
