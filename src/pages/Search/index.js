@@ -41,7 +41,26 @@ const Search = () => {
       >
         Busca
       </Title>
+
+      <SearchContainer
+        style={{
+          transform: [
+            {
+              translateY: scrollOffset.interpolate({
+                inputRange: [0, 130],
+                outputRange: [150, statusBarHeight],
+                extrapolate: 'clamp',
+              }),
+            },
+          ],
+        }}
+      >
+        <Icon name="search" size={24} color="#777" />
+        <SearchTextInput>Artistas, Sons, ou podcasts</SearchTextInput>
+      </SearchContainer>
+
       <Animated.ScrollView
+        showsVerticalScrollIndicator={false}
         onScroll={Animated.event(
           [
             {
@@ -61,11 +80,6 @@ const Search = () => {
         }}
       >
         <Inner>
-          <SearchContainer>
-            <Icon name="search" size={24} color="#777" />
-            <SearchTextInput>Artistas, Sons, ou podcasts</SearchTextInput>
-          </SearchContainer>
-
           {sections.map((section) => (
             <SectionContainer key={`${section.id}`}>
               <SectionTitle>{section.title}</SectionTitle>

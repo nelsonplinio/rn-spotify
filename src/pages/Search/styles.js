@@ -9,8 +9,8 @@ export const Container = styled.View`
 export const Inner = styled.View`
   align-items: center;
   flex: 1;
-  margin-top: 30%;
-  padding: 0 16px 0;
+  margin-top: 120px;
+  padding: 10px 16px 0;
   background: #212021;
 `;
 
@@ -25,14 +25,17 @@ export const Title = styled(Animated.Text)`
   position: absolute;
 `;
 
-export const SearchContainer = styled.View`
+export const SearchContainer = styled(Animated.View)`
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background: #fff;
   border-radius: 8px;
-  width: 100%;
+  width: 95%;
   height: 50px;
+  z-index: 10;
+  align-self: center;
+  border: solid 2px #eee;
 `;
 
 export const SearchTextInput = styled.Text`

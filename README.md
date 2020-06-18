@@ -35,9 +35,9 @@
 <div style="display: flex">
   <img style="width: 200px;" src="img/home.png">
   <br />
-  <img  style="width: 200px" src='img/player.png'>
+  <img style="width: 200px" src='https://media.giphy.com/media/ZXxK4Q926RSXZS9Vd3/giphy.gif'>
   <br />
-  <img style="width: 200px" src='img/search.png'>
+  <img  style="width: 200px" src='img/player.png'>
   <br />
 </div>
 
